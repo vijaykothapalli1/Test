@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "86c9ef0a-d209-4e14-af20-aae8bd5fc948",
+		"name": "t2m-ui",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reset_data_java",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9001/api/reset-data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"reset-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check project status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9001/api/status/1702381990700",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"status",
+						"1702381990700"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list projects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9001/api/projects",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadProject- java",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "multipart/form-data; boundary=---011000010111000001101001"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "input_type",
+							"value": "runtime",
+							"type": "text"
+						},
+						{
+							"key": "input_file",
+							"type": "file",
+							"src": "/D:/ps-git/t2m/tibco-to-mule-accelerators/test/data/common/t2m_trigger/appmanage_extract/tib-ps.zip"
+						},
+						{
+							"key": "config_file",
+							"type": "file",
+							"src": "/D:/ps-git/t2m/tibco-to-mule-accelerators/test/data/common/xsd/config.yaml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9001/api/uploadProject",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"uploadProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload Schema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "multipart/form-data; boundary=---011000010111000001101001"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "raml_name",
+							"value": "testraml",
+							"type": "text"
+						},
+						{
+							"key": "input_file",
+							"type": "file",
+							"src": "/D:/test/set1.zip"
+						},
+						{
+							"key": "config_file",
+							"type": "file",
+							"src": "/D:/ps-git/t2m/tibco-to-mule-accelerators/test/data/common/xsd/config.yaml"
+						},
+						{
+							"key": "preserve_case",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9182/api/uploadRaml",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9182",
+					"path": [
+						"api",
+						"uploadRaml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xslt-dwl",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "multipart/form-data; boundary=---011000010111000001101001"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "input_file",
+							"type": "file",
+							"src": "/D:/ps-git/t2m/tibco-to-mule-accelerators/test/data/common/t2m_trigger/appmanage_extract/tib-ps.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9182/api/uploadGVConversion",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9182",
+					"path": [
+						"api",
+						"uploadGVConversion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Domain analysis",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "multipart/form-data; boundary=---011000010111000001101001"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "input_file",
+							"type": "file",
+							"src": "/D:/ps-git/t2m/tibco-to-mule-accelerators/test/data/common/t2m_trigger/appmanage_extract/tib-ps.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9182/api/uploadDomainAnalysis",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9182",
+					"path": [
+						"api",
+						"uploadDomainAnalysis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Artifacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9001/api/artifacts/1702276878707",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"artifacts",
+						"1702276878707"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update artifacts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{'request_id': '1702275389888', \r\n'projectPath': 'D:\\\\ps-git\\\\t2m\\\\tibco-to-mule-accelerators\\\\src\\\\api\\\\../../target/bw5/temp\\\\request1702275389888/target/request1702275389888.zip', \r\n'dcProjects': ['xe-sapi', 't2m_tibdemo']}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9001/api/artifacts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"artifacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"admin\",\r\n\t\"password\": \"password\",\r\n\t\"role\":\"ROLE_ADMIN\",\r\n\t\"email\":\"admin@prowesssoft.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9182/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9182",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
